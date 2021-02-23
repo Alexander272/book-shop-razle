@@ -1,0 +1,120 @@
+@import './THEME.scss';
+
+.title {
+    font-size: 1.6rem;
+    color: $mainColor;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5% 15px;
+}
+
+.titleLink {
+    color: $mainColor;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.book {
+    margin: 0 2%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    box-shadow: 0 0 5px #000000a6;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    height: 600px;
+
+    &:hover {
+        .minInfo {
+            height: 600px;
+        }
+    }
+}
+
+.imageContainer {
+    flex-grow: 1;
+    display: flex;
+}
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.linkBlock {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+}
+.link {
+    border: 1px solid #fff;
+    padding: 7px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        color: #013c96c7;
+        background: #fff;
+    }
+}
+.minInfo {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #013c96c7;
+    overflow: hidden;
+}
+
+.bookName {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 1.1px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.author {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 1060px) {
+    .book {
+        flex-basis: 31%;
+    }
+}
+
+@media (max-width: 770px) {
+    .book {
+        flex-basis: 48%;
+        margin: 10px 1%;
+    }
+}
+
+@media (max-width: 660px) {
+    .title {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 530px) {
+    .book {
+        flex-basis: 98%;
+    }
+}
