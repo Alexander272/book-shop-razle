@@ -9,7 +9,7 @@ function* getAuth() {
         const data = yield call(service.getAuth)
         yield put(actions.loginSuccess(data.payload))
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
