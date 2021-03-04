@@ -5,7 +5,9 @@ const { isEditor } = require('../middleware/admin.middleware')
 
 const router = Router()
 
-router.get('/', auth, isEditor, async (req, res) => {
+// auth, isEditor,
+
+router.get('/', async (req, res) => {
     try {
         const data = await getStatistics()
         res.json(data)

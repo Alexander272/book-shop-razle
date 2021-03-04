@@ -19,18 +19,18 @@ exports.getStatistics = async () => {
     const subs = await Subscribers.countDocuments()
     let books = []
     order.forEach(o => {
-        o.book.forEach((book, i) => {
+        o.book.forEach(book => {
             let isAdd = false
             books.forEach(b => {
-                if (JSON.stringify(b.bookId) === JSON.stringify(book.bookId)) {
-                    b.number += book.number
+                if (b.bookId === book.bookId) {
+                    b.count += book.count
                     isAdd = true
                 }
             })
             if (!isAdd)
                 books.push({
                     bookId: book.bookId,
-                    number: book.number,
+                    count: book.count,
                     name: book.name,
                     price: book.price,
                 })
@@ -38,7 +38,7 @@ exports.getStatistics = async () => {
     })
     let allPrice = 0
     books.forEach(book => {
-        allPrice += book.price * book.number
+        allPrice += book.price * book.count
     })
     return {
         books,

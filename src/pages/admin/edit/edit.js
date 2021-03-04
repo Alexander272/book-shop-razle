@@ -59,7 +59,7 @@ export default function AdminEditById() {
                 method: 'GET',
                 headers: { authorization: `Bearer ${token}` },
                 data: null,
-                url: `/api/catalog/${id}`,
+                url: `/api/book/${id}`,
             })
             setForm(response.data)
             setImageUrl({ url: response.data.previewUrl, name: response.data.previewName })

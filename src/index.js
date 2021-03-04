@@ -14,14 +14,14 @@ if (module.hot) {
     console.info('✅  Server-side HMR Enabled!')
 }
 
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 export default express()
     .use((req, res) => app.handle(req, res))
-    .listen(port, function (err) {
+    .listen(PORT, function (err) {
         if (err) {
             console.error(err)
             return
         }
-        console.log(`> Started on port ${port}`)
+        console.log(`> Started on port ${PORT}`)
     })

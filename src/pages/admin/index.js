@@ -78,7 +78,7 @@ export default function AdminPage() {
                                             <p className={classes.book_name}>
                                                 <span>{book.name}</span> &#10006;{' '}
                                                 <span className={classes.book_warn}>
-                                                    {book.number}
+                                                    {book.count}
                                                 </span>
                                             </p>
                                             <p className={classes.book_name}>
